@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-*: initial;
+  --default-font-family: "Inter", sans-serif;
+  --font-heading: "Figtree", sans-serif;
+
+  --color-neutral-lightest: #F2F2F2;
+  --color-neutral-lighter: #D9D9D9;
+  --color-neutral-light: #B3B3B4;
+  --color-neutral: #808182;
+  --color-neutral-dark: #4D4E50;
+  --color-neutral-darker: #1B1C1E;
+  --color-neutral-darkest: #020305;
+
+  --color-cello-lightest: #E8EBEF;
+  --color-cello-lighter: #D2D7DF;
+  --color-cello-light: #61758F;
+  --color-cello: #1E3A5F;
+  --color-cello-dark: #182E4C;
+  --color-cello-darker: #0C1726;
+  --color-cello-darkest: #09111C;
+
+  --color-pizza-lightest: #FAF5E7;
+  --color-pizza-lighter: #F6ECD0;
+  --color-pizza-light: #E0BC5C;
+  --color-pizza: #D4A017;
+  --color-pizza-dark: #A98012;
+  --color-pizza-darker: #544009;
+  --color-pizza-darkest: #3F3006;
+
+  --color-seagreen-lightest: #EAF3EE;
+  --color-seagreen-lighter: #D5E7DD;
+  --color-seagreen-light: #6CAD89;
+  --color-seagreen: #2E8B57;
+  --color-seagreen-dark: #246F45;
+  --color-seagreen-darker: #123722;
+  --color-seagreen-darkest: #0D291A;
+
+  --color-sunglo-lightest: #FBF0F1;
+  --color-sunglo-lighter: #F8E1E3;
+  --color-sunglo-light: #E9989E;
+  --color-sunglo: #E06C75;
+  --color-sunglo-dark: #B3565D;
+  --color-sunglo-darker: #592B2E;
+  --color-sunglo-darkest: #432023;
+
+}
+
+body {
+  color: var(--color-neutral-darkest);
+}
+
+#header-bar {
+  @apply bg-cello-lightest flex w-full items-center border-b border-b-cello-lighter lg:min-h-18 lg:px-[5%] fixed top-0;
+  img {
+    @apply max-h-10 md:max-h-12;
+  }
+
+  #menu-btn {
+    display: none;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+  }
+
+  #primary-nav {
+    @apply overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto] ease-in-out duration-3000 text-lg;
+    height: var(--height-closed, 0);
+
+    .nav-item {
+      @apply block p-1.5
+    }
+  }
+}
+#hamburger-menu {
+  @apply -rotate-180 ease-in-out duration-300;
+}
+#header-bar:has(#menu-btn:checked) {
+  #hamburger-menu {
+    @apply rotate-180;
+  }
+
+  #primary-nav {
+    height: var(--height-open, auto);
+  }
+}
+
+.content-section {
+  @apply px-[5%] py-16 md:py-24 lg:py-28;
+
+  .container {
+    @apply m-auto flex flex-col items-center;
+  }
+}
+
+#footer {
+  @apply bg-cello-lightest flex flex-col w-full items-center px-[5%] py-12 md:py-18 lg:py-20 border-t border-t-cello-lighter text-lg;
+
+  .social-networks {
+    @apply flex flex-row gap-8 mt-10 mb-20;
+
+    svg {
+      @apply size-8 text-cello;
+    }
+  }
+
+  p:last-of-type {
+    @apply text-base;
+  }
+}
+
+.btn-bar {
+  @apply mt-6 flex items-center justify-center gap-x-4 md:mt-8;
+}
+.btn-primary {
+  @apply inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer rounded bg-cello text-cello-lightest px-6 py-3;
+}
+.btn-secondary {
+  @apply inline-flex gap-3 items-center justify-center whitespace-nowrap ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer rounded bg-cello-lighter text-neutral-darkest px-6 py-3;
+}
+
+#technologies {
+  @apply px-[5%] py-12 md:py-16 lg:py-20;
+
+  .logos-container {
+    @apply grid grid-cols-2 gap-2 md:grid-cols-3;
+
+    div {
+      @apply flex w-full items-start justify-center justify-self-center bg-neutral-lightest px-4 pb-4 pt-[0.875rem] md:p-[0.875rem];
+    }
+    img {
+      @apply max-h-12 md:max-h-14;
+    }
+  }
+}
+
+h1 {
+  @apply font-heading mb-5 text-6xl font-bold md:mb-6 lg:text-8xl;
+}
+h2 {
+  @apply font-heading mb-5 text-4xl font-bold md:mb-6 lg:text-6xl;
+}
+h3 {
+  @apply font-heading mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl;
+}
