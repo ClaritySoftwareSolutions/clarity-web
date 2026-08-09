@@ -30,7 +30,7 @@
     "autoprefixer": "^10.4.2",
     "browser-sync": "^3.0.2",
     "copyfiles": "^2.4.1",
-    "cssnano": "^5.0.17",
+    "cssnano": "^8.0.0",
     "npm-run-all2": "^5.0.0",
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0"
