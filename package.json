@@ -33,7 +33,7 @@
     "cssnano": "^8.0.0",
     "npm-run-all2": "^9.0.0",
     "onchange": "^7.1.0",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^11.0.0"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
