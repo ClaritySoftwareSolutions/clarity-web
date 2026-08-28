@@ -14,6 +14,7 @@
     "copy": "npm-run-all --parallel copy:*",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "copy:images": "copyfiles -u 1 './src/images/**/*.*' public",
+    "copy:robots": "copyfiles -u 1 './src/robots.txt' public",
 
     "watch": "npm-run-all --parallel watch:*",
     "watch:html": "onchange 'src/*.html' -- npm run tailwind",
