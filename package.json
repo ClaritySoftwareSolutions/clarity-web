@@ -24,7 +24,9 @@
     "serve": "browser-sync start --server public --files public",
     "dev": "npm-run-all copy --parallel watch serve",
 
-    "build": "npm-run-all copy:html build:*",
+    "clean": "rm -rf public",
+    "prebuild": "npm-run-all clean",
+    "build": "npm-run-all tailwind copy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
   },
   "devDependencies": {
