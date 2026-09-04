@@ -129,18 +129,14 @@ body > .content-section:first-of-type  {
 }
 
 #footer {
-  @apply bg-cello-lightest flex flex-col w-full items-center px-[5%] py-12 md:py-18 lg:py-20 border-t border-t-cello-lighter text-lg;
+  @apply bg-cello-lightest flex flex-col w-full items-center px-[5%] py-6 sm:py-12 border-t border-t-cello-lighter text-sm sm:text-base h-auto sm:h-64;
 
   .social-networks {
-    @apply flex flex-row gap-8 mt-10 mb-20;
+    @apply flex flex-row gap-8 mt-5 mb-5 sm:mt-10 sm:mb-10;
 
     svg {
       @apply size-8 text-cello;
     }
-  }
-
-  p:last-of-type {
-    @apply text-base;
   }
 }
 
@@ -403,6 +399,9 @@ h3 {
   @apply font-heading mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl;
 }
 
-section:has(+footer) {
-  @apply sticky top-16 h-[70vh] flex items-center justify-center;
+@media (height >= 62rem) {
+  section:has(+footer) {
+    @apply sticky top-16 flex items-center justify-center;
+    height: calc(100dvh - (var(--spacing) * 64));
+  }
 }
