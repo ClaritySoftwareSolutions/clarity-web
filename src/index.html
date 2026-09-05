@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/css/styles.css" rel="stylesheet">
 
+  <link rel="preload" as="image" href="/images/city-background.jpg"/>
+  <link rel="preload" as="image" href="/images/logo.jpg"/>
   <link rel="preload" as="image" href="/images/clarity-software-solutions.png"/>
   <link rel="preload" as="image" href="./images/technologies/kotlin-logo.png"/>
   <link rel="preload" as="image" href="./images/technologies/java-logo.png"/>
@@ -44,11 +46,19 @@
   </div>
 </header>
 
-<section class="content-section">
+<section class="background-layer"></section>
+
+<section class="content-section" id="intro">
   <div class="container hero">
+    <img src="/images/logo.png"
+         title="Clarity Software Solutions are an independent software consultancy based in the Thames Valley in the south of England"
+         alt="Clarity Software Solutions logo" />
     <h1>
       Clarity Software Solutions
     </h1>
+    <h2>
+      Java and modern web stack consultancy
+    </h2>
     <p>
       We help customers develop high-quality software using Kotlin, Java, Spring Boot and modern web technologies. An independent consultancy based in the Thames Valley in the south of England.
     </p>
@@ -62,12 +72,6 @@
       </a>
     </div>
   </div>
-
-  <img
-    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=5070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    class="size-full object-cover"
-    alt="Relume placeholder image"
-  />
 </section>
 
 <section id="process" class="content-section">
