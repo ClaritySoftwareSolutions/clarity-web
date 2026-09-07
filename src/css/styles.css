@@ -177,6 +177,36 @@ body > .content-section:first-of-type  {
   }
 }
 
+.background-layer {
+  @apply z-[-1] fixed w-dvw h-dvh;
+  background-image: url("../images/city-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+}
+
+#intro {
+  @apply relative top-16 h-dvh pt-12 flex justify-center text-neutral-lightest;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), white);
+
+  img {
+    @apply h-20 mb-4 lg:h-40;
+  }
+  h1 {
+    @apply text-4xl lg:text-8xl;
+  }
+  h2 {
+    @apply text-xl lg:text-6xl;
+  }
+  .hero {
+    @apply mb-0 mt-0 justify-center;
+  }
+}
+
+#process {
+  background: white;
+}
+
 #services {
   > .content-section {
     .container {
