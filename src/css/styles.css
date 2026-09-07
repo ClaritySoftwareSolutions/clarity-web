@@ -178,7 +178,7 @@ body > .content-section:first-of-type  {
 }
 
 .background-layer {
-  @apply z-[-1] fixed w-dvw h-dvh;
+  @apply z-[-1] fixed w-full h-full;
   background-image: url("../images/city-background.jpg");
   background-size: cover;
   background-attachment: fixed;
