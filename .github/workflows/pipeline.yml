@@ -4,31 +4,13 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    inputs:
-      node_version_file:
-        description: "Passed to setup-node action to specify where to source the version of node from"
-        required: false
-        type: string
-        default: ".nvmrc"
-      npm_version:
-        description: "Passed to npm install so it knows which version of npm to install"
-        required: false
-        type: string
-        default: "^11"
-      install_command:
-        description: "The command used to install npm dependencies"
-        required: false
-        type: string
-        default: "npm ci --no-audit"
-      artifact_path:
-        description: "The paths to the build artifacts"
-        required: false
-        type: string
-        default: |
-          build/
-          dist/
-          assets/stylesheets/
+
+env:
+  node_version_file: ".nvmrc"
+  npm_version: "^11"
+  install_command: "npm ci --no-audit"
+  artifact_path: |
+      public/
 
 jobs:
   node-build:
@@ -38,16 +20,14 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Use Node.js ${{ inputs.node_version_file }}
+      - name: Use Node.js ${{ env.node_version_file }}
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version-file: ${{ inputs.node_version_file }}
+          node-version-file: ${{ env.node_version_file }}
       - name: update npm
         shell: bash
-        env:
-          NPM_VERSION: ${{ inputs.npm_version }}
         run: |
-          npm install -g "npm@$NPM_VERSION"
+          npm install -g "npm@${{ env.npm_version }}"
       - name: restore cache
         id: restore-cache
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
@@ -60,10 +40,8 @@ jobs:
       - name: install dependencies
         if: steps.restore-cache.outputs.cache-hit != 'true'
         shell: bash
-        env:
-          INSTALL_COMMAND: ${{ inputs.install_command }}
         run: |
-          bash -lc "${INSTALL_COMMAND}"
+          bash -lc "${{ env.install_command }}"
       - name: build npm
         shell: bash
         run: |
@@ -72,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: npm_build_artifacts
-          path: "${{ inputs.artifact_path }}"
+          path: "${{ env.artifact_path }}"
       - name: save cache
         id: save-cache
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
