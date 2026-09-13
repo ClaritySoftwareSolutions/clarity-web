@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  workflow_run:
     inputs:
       node_version_file:
         description: "Passed to setup-node action to specify where to source the version of node from"
