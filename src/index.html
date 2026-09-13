@@ -6,7 +6,7 @@
   <link href="/css/styles.css" rel="stylesheet">
 
   <link rel="preload" as="image" href="/images/city-background.jpg"/>
-  <link rel="preload" as="image" href="/images/logo.jpg"/>
+  <link rel="preload" as="image" href="/images/logo.png"/>
   <link rel="preload" as="image" href="/images/clarity-software-solutions.png"/>
   <link rel="preload" as="image" href="./images/technologies/kotlin-logo.png"/>
   <link rel="preload" as="image" href="./images/technologies/java-logo.png"/>
@@ -20,6 +20,7 @@
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1677091507171-4f430fada572?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1762163516269-3c143e04175c?q=80&w=3552&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1775214647951-af1d92fda09e?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
 
   <title>Clarity Software Solutions</title>
 </head>
@@ -46,9 +47,14 @@
   </div>
 </header>
 
-<section class="background-layer"></section>
+<section class="background-layer">
+  <img src="/images/city-background.jpg"
+       title="Clarity Software Solutions are an independent software consultancy based in the Thames Valley in the south of England"
+       alt="City skyline background image" />
+</section>
 
-<section class="content-section" id="intro">
+<div>
+  <section class="content-section" id="intro">
   <div class="container hero">
     <img src="/images/logo.png"
          title="Clarity Software Solutions are an independent software consultancy based in the Thames Valley in the south of England"
@@ -74,12 +80,9 @@
   </div>
 </section>
 
-<section id="process" class="content-section">
+  <section id="process" class="content-section">
   <div class="container">
-    <div class="w-full max-w-7xl rb-12 mb-12 text-center md:mb-18 lg:mb-20">
-      <p class="mb-3 font-semibold md:mb-4">
-        Process
-      </p>
+    <div class="section-summary">
       <h2>
         We build software the right way from the start
       </h2>
@@ -87,11 +90,9 @@
         There is no magic. Just a clear, disciplined approach refined over years in the field. We listen first, then we build.
       </p>
     </div>
-    <div
-      class="grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12"
-    >
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+    <div class="items">
+      <div>
+        <div class="image-container">
           <img src="https://images.unsplash.com/photo-1580894723150-0ff6e9b907ea?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="Discovery and story mapping are an intrinsic part of our process"
             alt="Image showing someone working at a whiteboard" />
@@ -104,8 +105,8 @@
           We sit with your team, understand the problem, and map the terrain before writing a single line of code.
         </p>
       </div>
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+      <div>
+        <div class="image-container">
           <img
             src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="Agility comes through working with and communicating with your team" alt="Image showing software developers working together" />
@@ -118,8 +119,8 @@
           Clean code, test-driven development, and constant communication keep the work honest and the progress visible.
         </p>
       </div>
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+      <div>
+        <div class="image-container">
           <img src="https://images.unsplash.com/photo-1677091507171-4f430fada572?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="Demonstrating working software to a delighted client as part of project handover"
             alt="Imaging showing the completed software project being handed over to a delighted client" />
@@ -145,17 +146,9 @@
   </div>
 </section>
 
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-/>
-<section class="content-section">
+  <section class="content-section" id="expertise">
   <div class="container">
-    <div class="w-full max-w-7xl rb-12 mb-12 text-center md:mb-18 lg:mb-20">
-      <p class="mb-3 font-semibold md:mb-4">
-        Expertise
-      </p>
+    <div class="section-summary">
       <h2>
         Tools sharpened by years on the front line
       </h2>
@@ -163,12 +156,9 @@
         We choose the right tool for the fight. Our stack is modern, proven, and wielded with precision.
       </p>
     </div>
-    <div
-      listName="layout239_list"
-      class="grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12"
-    >
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+    <div class="items">
+      <div>
+        <div class="image-container">
           <img src="https://images.unsplash.com/photo-1762163516269-3c143e04175c?q=80&w=3552&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             title="Backend engineering that is standards compliant, secure, and scalable"
             alt="Image of a backend server in a data center" />
@@ -181,8 +171,8 @@
           Kotlin, Java, Spring Boot, MVC, REST APIs, JPA, and asynchronous messaging built to last.
         </p>
       </div>
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+      <div>
+        <div class="image-container">
           <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                title="Frontends are modern, standards compliant, and tested."
                alt="Photo of users using and interacting with a modern website" />
@@ -195,12 +185,14 @@
           TypeScript, modern JavaScript, Node.js, Express, GDS components, Jest, and Cypress for an honest interface.
         </p>
       </div>
-      <div class="flex w-full flex-col items-center text-center">
-        <div class="rb-6 mb-6 md:mb-8">
+      <div>
+        <div class="image-container">
           <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-            alt="Relume placeholder image"
+            src="https://images.unsplash.com/photo-1775214647951-af1d92fda09e?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            title="Working software starts with tests and clean code"
+            alt="Photo of a green traffic light at night"
           />
+          Photo by <a href="https://unsplash.com/@superfluousfacsimile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Justin Dyer</a> on <a href="https://unsplash.com/photos/a-green-traffic-light-illuminates-at-night-8YcWFNbJALc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </div>
         <h3>
           A discipline of quality
@@ -223,12 +215,12 @@
   </div>
 </section>
 
-<link
-  rel="preload"
-  as="image"
-  href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-/>
-<section class="content-section">
+  <link
+    rel="preload"
+    as="image"
+    href="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+  />
+  <section class="content-section" id="our-work">
   <div class="container">
     <img
       src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
@@ -261,7 +253,7 @@
   </div>
 </section>
 
-<section class="content-section" id="technologies">
+  <section class="content-section" id="technologies">
   <div class="container">
     <h2>
       The tools we trust to do the job
@@ -288,6 +280,7 @@
     </div>
   </div>
 </section>
+</div>
 
 <section class="content-section">
   <div class="container">
