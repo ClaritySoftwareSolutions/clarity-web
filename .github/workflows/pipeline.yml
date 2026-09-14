@@ -16,6 +16,9 @@ jobs:
   node-build:
     name: Run the node build
     runs-on: ubuntu-latest
+    environment:
+      name: prod
+      deployment: true
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -60,3 +63,7 @@ jobs:
           path: |
             ./node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json', '!**/node_modules/**') }}
+      - name: Upload to S3
+        run: |
+          aws s3 sync ./public s3://{{ secrets.BUCKET_NAME }}
+
