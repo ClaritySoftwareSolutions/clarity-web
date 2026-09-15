@@ -1,0 +1,4 @@
+{
+  "version": "{{ VERSION }}",
+  "build-date": "{{ BUILD_DATE }}"
+}
