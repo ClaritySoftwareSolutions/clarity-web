@@ -3,3 +3,4 @@ public
 .cache
 .idea
 .DS_Store
+.terraform
