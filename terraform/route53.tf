@@ -7,16 +7,22 @@ resource "aws_route53_record" "claritySoftwareCoUk-a" {
   zone_id = aws_route53_zone.claritySoftwareCoUk.zone_id
   name    = "claritysoftware.co.uk"
   type    = "A"
-  records = ["35.177.134.128"]
-  ttl     = 3600
+  alias {
+    name                   = data.aws_cloudfront_distribution.claritySoftwareCoUk.domain_name
+    zone_id                = data.aws_cloudfront_distribution.claritySoftwareCoUk.hosted_zone_id
+    evaluate_target_health = false
+  }
 }
 
 resource "aws_route53_record" "www-claritySoftwareCoUk-a" {
   zone_id = aws_route53_zone.claritySoftwareCoUk.zone_id
   name    = "www.claritysoftware.co.uk"
   type    = "A"
-  records = ["35.177.134.128"]
-  ttl     = 3600
+  alias {
+    name                   = data.aws_cloudfront_distribution.claritySoftwareCoUk.domain_name
+    zone_id                = data.aws_cloudfront_distribution.claritySoftwareCoUk.hosted_zone_id
+    evaluate_target_health = false
+  }
 }
 
 resource "aws_route53_record" "claritySoftwareCoUk-mx" {
