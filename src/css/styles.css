@@ -186,7 +186,7 @@ body > .content-section:first-of-type  {
 
 #intro {
   @apply relative top-16 h-dvh pt-12 flex justify-center text-neutral-lightest bg-transparent;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), white);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
 
   img {
     @apply h-20 mb-4 lg:h-40;
