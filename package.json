@@ -34,8 +34,8 @@
     "autoprefixer": "^10.6.1",
     "browser-sync": "^3.0.4",
     "copyfiles": "^2.4.1",
-    "cssnano": "^9.1.1",
-    "npm-run-all2": "^9.0.3",
+    "cssnano": "^9.9.0",
+    "npm-run-all2": "^9.0.4",
     "onchange": "^7.1.0",
     "postcss-cli": "^12.0.0",
     "replace-in-files-cli": "4.0.0"
