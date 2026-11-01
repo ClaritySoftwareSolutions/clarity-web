@@ -1,0 +1,29 @@
+#not-found {
+
+  .content-section {
+    @apply py-0 md:py-24 lg:py-28;
+  }
+  .container {
+    @apply relative min-h-full h-[calc(100dvh-(var(--spacing)*66))] md:h-auto overflow-hidden md:grid md:grid-cols-2 md:gap-2;
+    @media (height >= 64rem) {
+      @apply md:h-50;
+    }
+
+    > div {
+      @apply overflow-hidden;
+    }
+    img {
+      @apply h-[calc(100%-(var(--spacing)*8))] object-cover md:h-auto;
+      @media (height >= 64rem) {
+        @apply h-[calc(100%-(var(--spacing)*8))] w-full;
+      }
+    }
+    div:nth-of-type(2) {
+      @apply absolute p-5 text-neutral-lightest bg-linear-to-b from-[black] via-[black_50%] via-[black_25%] via-[black_0%] to-[black_0%]   md:text-neutral-darkest md:bg-none md:relative md:flex md:flex-col md:justify-center;
+
+      h1 {
+        @apply text-4xl md:text-5xl lg:text-8xl;
+      }
+    }
+  }
+}

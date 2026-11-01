@@ -8,6 +8,9 @@ resource "aws_s3_bucket_website_configuration" "website-config" {
   index_document {
     suffix = "index.html"
   }
+  error_document {
+    key = "404.html"
+  }
 }
 
 data "aws_s3_bucket" "this" {
