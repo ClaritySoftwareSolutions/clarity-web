@@ -1,0 +1,26 @@
+#contact-us {
+  .content-section {
+    display: block;
+
+    .container:not(:first-of-type) {
+      > div {
+        @apply grid auto-cols-fr grid-cols-1 gap-x-12 gap-y-12 md:grid-cols-3 md:gap-y-16;
+      }
+
+      svg {
+        @apply size-12 mb-5 lg:mb-6;
+      }
+
+      p {
+        @apply mb-5 md:mb-6;
+      }
+
+      .email, .phone, .post {
+        svg, h3 {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

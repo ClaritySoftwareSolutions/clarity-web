@@ -1,0 +1,184 @@
+#services {
+  > .content-section {
+    .container {
+      @apply items-center;
+    }
+  }
+  .architecture.content-section {
+    > .container {
+      @apply items-center;
+      > div:first-of-type {
+        text-align: center;
+      }
+    }
+  }
+
+  .our-process {
+    .content-section {
+      @apply pb-8 overflow-clip py-16;
+      @media (height >= 64rem) {
+        @apply md:sticky md:border-t md:pb-14 lg:pb-0 md:h-dvh lg:py-28;
+      }
+    }
+
+    .process-item {
+      @apply grid grid-cols-1 gap-y-12 md:items-center md:gap-x-12 lg:grid-cols-2 lg:gap-x-20 py-8 md:py-10 lg:py-12;
+    }
+
+    .embed {
+      @apply bg-amber-dark;
+      @media (height >= 64rem) {
+        @apply md:top-16 lg:mb-32;
+      }
+    }
+
+    .adapt {
+      @apply bg-cello-light;
+      @media (height >= 64rem) {
+        @apply md:top-32 lg:-mt-16 lg:mb-16;
+      }
+    }
+
+    .lifecyle {
+      @apply bg-emerald-dark;
+      @media (height >= 64rem) {
+        @apply bg-emerald-dark;
+      }
+    }
+
+    img {
+      @apply h-100 w-full object-cover sm:h-120 md:h-[60vh];
+    }
+  }
+
+  .architecture.content-section {
+    @apply top-0;
+  }
+
+  .architecture {
+    input[type=radio] {
+      display: none;
+      position: absolute;
+      top: -100%;
+      left: -100%;
+    }
+
+    @media (height >= 64rem) {
+      .container, .end-sticky {
+        @apply relative md:sticky md:top-32 md:h-dvh;
+      }
+
+      .end-sticky {
+        @apply md:h-80;
+      }
+    }
+
+    .details-container {
+      @apply grid grid-cols-1 items-center gap-x-12 md:grid-cols-2 lg:gap-x-20 mt-16;
+    }
+
+    .image-column {
+      @apply hidden md:flex mb-6 max-h-full w-full items-center justify-center overflow-hidden md:mb-0 relative;
+      padding-bottom: calc(100% + 2rem);
+      div {
+        @apply absolute opacity-0;
+        transition: opacity 300ms ease-in-out;
+        top: 0;
+      }
+      img {
+        @apply size-full object-cover;
+      }
+    }
+
+    .details-column {
+      @apply relative grid auto-cols-fr grid-cols-1 grid-rows-[auto_auto] items-start md:items-stretch;
+      > div:first-of-type {
+        @apply mt-8 md:mt-0 md:pt-0;
+      }
+      > div {
+        @apply mt-16 md:mt-0 md:cursor-pointer md:border-b md:py-6 md:opacity-25;
+      }
+
+      h3 {
+        @apply md:mb-0;
+      }
+      p {
+        interpolate-size: allow-keywords;
+        transition: height 300ms ease-in-out;
+        @apply md:mt-0 overflow-hidden md:h-0;
+      }
+      .image {
+        @apply pt-8 md:hidden;
+      }
+      > div:has(input:checked) {
+        @apply md:opacity-100;
+        h3 {
+          @apply md:mb-6
+        }
+        p {
+          @apply md:mt-4 md:h-auto;
+        }
+      }
+    }
+
+    .details-container:has(input[value=foundations]:checked) .foundations,
+    .details-container:has(input[value=maintainable]:checked) .maintainable,
+    .details-container:has(input[value=alignment]:checked) .alignment {
+      @apply opacity-100
+    }
+  }
+
+  .craft {
+
+    .content-section:first-of-type {
+      .container {
+        @apply items-center;
+
+        > div:first-of-type {
+          text-align: center;
+        }
+      }
+    }
+    .content-section {
+      @apply py-16;
+      @media (height >= 64rem) {
+        @apply md:sticky md:top-16 lg:mb-32 lg:pb-0 md:h-dvh;
+      }
+    }
+
+    .content-section:not(:first-of-type) {
+      @apply px-[5%] py-8 md:py-16;
+      .container {
+        @apply grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20;
+      }
+    }
+
+    .jvm-languages {
+      @apply bg-amber-dark;
+      @media (height >= 64rem) {
+        @apply md:top-100 lg:-mt-16 lg:mb-16;
+        img {
+          @apply md:h-[55dvh];
+        }
+      }
+    }
+
+    .spring-boot {
+      @apply bg-cello-light;
+      @media (height >= 64rem) {
+        @apply md:top-116 lg:mb-0;
+        img {
+          @apply md:h-[50dvh];
+        }
+      }
+    }
+
+    .frontend {
+      @apply bg-emerald-dark;
+      @media (height >= 64rem) {
+        @apply md:top-132 lg:mb-0;
+      }
+    }
+
+  }
+}

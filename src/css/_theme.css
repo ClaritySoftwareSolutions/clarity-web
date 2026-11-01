@@ -1,0 +1,57 @@
+@theme {
+  --font-*: initial;
+  --default-font-family: "Inter", sans-serif;
+  --font-heading: "Figtree", sans-serif;
+
+  --color-neutral-lightest: #F2F2F2;
+  --color-neutral-lighter: #D9D9D9;
+  --color-neutral-light: #B3B3B4;
+  --color-neutral: #808182;
+  --color-neutral-dark: #4D4E50;
+  --color-neutral-darker: #1B1C1E;
+  --color-neutral-darkest: #020305;
+
+  --color-cello-lightest: #E8EBEF;
+  --color-cello-lighter: #D2D7DF;
+  --color-cello-light: #61758F;
+  --color-cello: #1E3A5F;
+  --color-cello-dark: #182E4C;
+  --color-cello-darker: #0C1726;
+  --color-cello-darkest: #09111C;
+
+  --color-pizza-lightest: #FAF5E7;
+  --color-pizza-lighter: #F6ECD0;
+  --color-pizza-light: #E0BC5C;
+  --color-pizza: #D4A017;
+  --color-pizza-dark: #A98012;
+  --color-pizza-darker: #544009;
+  --color-pizza-darkest: #3F3006;
+
+  --color-seagreen-lightest: #EAF3EE;
+  --color-seagreen-lighter: #D5E7DD;
+  --color-seagreen-light: #6CAD89;
+  --color-seagreen: #2E8B57;
+  --color-seagreen-dark: #246F45;
+  --color-seagreen-darker: #123722;
+  --color-seagreen-darkest: #0D291A;
+
+  --color-sunglo-lightest: #FBF0F1;
+  --color-sunglo-lighter: #F8E1E3;
+  --color-sunglo-light: #E9989E;
+  --color-sunglo: #E06C75;
+  --color-sunglo-dark: #B3565D;
+  --color-sunglo-darker: #592B2E;
+  --color-sunglo-darkest: #432023;
+
+  --color-amber-light: #FDF2E9;
+  --color-amber: #F59E0B;
+  --color-amber-dark: #D97706;
+
+  --color-emerald-light: #ECFDF5;
+  --color-emerald: #10B981;
+  --color-emerald-dark: #059669;
+
+  --color-coral-light: #FFF1F2;
+  --color-coral: #FF6B6B;
+  --color-coral-dark: #E04848;
+}
