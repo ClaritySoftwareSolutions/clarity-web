@@ -19,6 +19,13 @@ resource "aws_cloudfront_distribution" "claritySoftwareCoUk" {
 
   aliases = ["claritysoftware.co.uk", "www.claritysoftware.co.uk"]
 
+  custom_error_response {
+    error_code            = 404
+    response_code         = 404
+    response_page_path    = "/404.html"
+    error_caching_min_ttl = 10
+  }
+
   restrictions {
     geo_restriction {
       locations = []
@@ -62,6 +69,13 @@ resource "aws_cloudfront_distribution" "claritySoftwareSolutions" {
   }
 
   aliases = ["claritysoftware.solutions", "www.claritysoftware.solutions"]
+
+  custom_error_response {
+    error_code            = 404
+    response_code         = 404
+    response_page_path    = "/404.html"
+    error_caching_min_ttl = 10
+  }
 
   restrictions {
     geo_restriction {
